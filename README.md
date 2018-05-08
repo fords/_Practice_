@@ -1,2 +1,2 @@
-100 days coding challenge
+60 days coding challenge
 Data Strcture, Algortihms, List and etc.
