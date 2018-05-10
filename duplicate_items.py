@@ -12,3 +12,9 @@ def duplicate_items(list_numbers):
 	
 	
 #  [list.append(x) for x in list_numbers if x not in list]   #one line coding for unique numbers in a list
+
+
+"""def duplicate_items(list_numbers):
+    set_list = set(list_numbers)
+    return [i for i in set_list if list_numbers.count(i)>1]"""
+	
