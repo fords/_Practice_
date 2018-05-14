@@ -1,2 +1,2 @@
-
-Data Strcture, Algortihms, List and etc. practice
+100 days coding challenge
+Data Strcture, Algortihms, List and etc.
