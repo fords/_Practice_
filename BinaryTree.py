@@ -1,4 +1,3 @@
-#global pre_ordered_list
 pre_ordered_list = []
 class BinaryTree:
     
@@ -20,6 +19,12 @@ class BinaryTree:
     def get_left_child(self):
         return self.left_child
 
+    def set_right(self,right):
+        self.right_child = right 
+        
+    def set_left(self,left):
+        self.left_child = left 
+        
     def set_root_val(self, obj):
         self.data = obj
 
@@ -30,8 +35,14 @@ class BinaryTree:
         return "From str method of Test: left_child is %s, right_child is %s, data is %s" % (self.left_child, self.right_child,self.data)
     
 if __name__ == '__main__':
-    tree = BinaryTree([123,2,3,4]) 
-    tree.preorder()
+    tree = BinaryTree(1)
+    tree.set_left(BinaryTree(4))
+    tree.set_right(BinaryTree(3))
+    #tree_left = tree.set_left(BinaryTree(2))
+    #tree_left.set_left(BinaryTree(4))
+    tree2 = BinaryTree(5)
+    tree2.set_left(tree)  # 5 -> left 1 (left 4 right 3)
+    tree2.preorder()
     print tree
     for i in pre_ordered_list:
         print i 
