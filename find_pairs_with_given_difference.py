@@ -12,23 +12,14 @@ def find_pairs_with_given_difference(arr, k):
   while len(array_b) != 0 : 
     a = array_b.pop(0)
     for each in arr:
-      #print a 
-      compliment = each - a 
-      #print each
-      #print arr
       if each - a == k:
-        print 'in if'
-        if each -a > 0: 
           res.append([each,a])
-          #print str(res)+'res'
-        #elif a - each > 0:
-          #res.append([a,each])
-          #print str(res)+'res'
-      else:
-        pass
-  #print res 
   return res
   
   
 if __name__ == '__main__':
   find_pairs_with_given_difference( [1,5,11,7], 4)  
+  #list = [24, 55, 66 ,2, 3, 24]
+  #d1 = dict([i,None] for i in list)
+  #if 24 in d1:
+  #  print d1[24]  
