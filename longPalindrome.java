@@ -1,20 +1,20 @@
 class Solution {
     public String longestPalindrome(String s) {
-    int ans = 0;
-    int lt = 0;
-    int rt = 0;
-    for(int i=0;i<s.length();i++){
-        for(int j=i+ans;j<s.length();j++){
-            if(isPalindromic(s.substring(i,j+1))){
-                if(ans<(j-i+1)){
-                ans = j-i+1;
-                lt = i;
-                rt = j;
+        int ans = 0;
+        int lt = 0;
+        int rt = 0;
+        for(int i=0;i<s.length();i++){
+            for(int j=i+ans;j<s.length();j++){
+                if(isPalindromic(s.substring(i,j+1))){
+                    if(ans<(j-i+1)){
+                    ans = j-i+1;
+                    lt = i;
+                    rt = j;
+                    }
                 }
             }
         }
-    }
-    return s.substring(lt,rt+1);
+        return s.substring(lt,rt+1);
     }
     
     public boolean isPalindromic(String s){
@@ -24,8 +24,8 @@ class Solution {
                 ret = false;
                 break;
                 }
-    }
-    return ret;
+            }
+            return ret;
     }
 }
 
