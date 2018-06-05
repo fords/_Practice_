@@ -19,7 +19,7 @@ public class Solution {
         StringBuilder result = new StringBuilder();
         String result_str;
         for (int i = 1 ; i < n+1 ; i++){
-            // append white space (n-1) + n # 
+            // append white space (n-i) + i # 
             for ( int j = 1 ; j < n-i+1 ; j++ ){
                 result = result.append(" ");
             }
@@ -38,7 +38,7 @@ public class Solution {
     public static void main(String[] args) {
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
+		// n  = 4
         staircase(n);
 
         scanner.close();
