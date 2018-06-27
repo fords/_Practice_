@@ -1,5 +1,5 @@
 class Solution {
-    private int lo, maxLen;
+    /* private int lo, maxLen;
 
     public String longestPalindrome(String s) {
         int len = s.length();
@@ -22,6 +22,32 @@ class Solution {
             lo = j + 1;
             maxLen = k - j - 1;
         }
+    }  */
+	public String longestPalindrome(String s) {
+         if (s.length() <= 1) return s;
+         int i = 0, k = 0 , l = 0;  
+         String result="";
+         while ( i != s.length()){
+             //System.out.println("loop " +i);
+             k = i - 1; l = i + 1;
+             while (k >= 0 && l <s.length() && s.charAt(k) == s.charAt(l)){
+                   
+                if ( l - k >= result.length()) {result = s.substring(k,l+1);} 
+                k -= 1; l += 1;
+                if ( k < 0 || l >= s.length()) break;
+            }
+               
+             
+             k = i; l = i+1;
+             while ( k >= 0 && l <s.length() && s.charAt(k) == s.charAt(l) ){
+                 if ( l - k >= result.length()) {result = s.substring(k,l+1);} 
+                k -= 1; l += 1;
+                if ( k < 0 || l >= s.length()) break;
+            }
+             i++;
+        }
+        if (result.length() == 0 ) return Character.toString(s.charAt(s.length()-1));
+        return result;
     }
 }
 
